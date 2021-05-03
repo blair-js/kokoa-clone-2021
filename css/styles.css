@@ -17,4 +17,7 @@ body{
     /* height: 1000vh; */
 }
 
+.main-screen {
+    padding: 0px var(--horizontal-space);
+}
   
