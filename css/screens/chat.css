@@ -1,6 +1,6 @@
 #chat-screen {
     background-color: #abc1d1;
-    height: 11000vh;
+    height: 500vh;
 }
 
 #chat-screen .alt-header,
@@ -20,12 +20,24 @@
     z-index: 1;
 }
 
+@keyframes fadeIn {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
 .main-chat {
-    margin-top: 120px;
+    margin-top: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 14px;
+    animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -54,6 +66,17 @@
     display: block;
 }
 
+@keyframes fadeIn2{
+    from{
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+}
+
 .message__bubble {
     background-color: white;
     padding: 13px;
@@ -62,6 +85,7 @@
     border-top-left-radius: 0px;
     display: block;
     margin-right: 5px;
+    animation: fadeIn2 1s linear;
 }
 
 .message__info {
@@ -74,6 +98,7 @@
     opacity: 0.8;
     font-size: 13px;
 }
+
 
 .message-row--own {
     justify-content: flex-end;
