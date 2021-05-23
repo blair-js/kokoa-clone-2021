@@ -1,0 +1,88 @@
+MEMO_0523
+
+<1> 숫자 (따옴표 없음)
+1) 수의 표현
+정수
+실수
+
+자바스크립트에서는 큰따옴표나 작은따옴표가 붙지 않는 숫자는 숫자로 인식한다. 
+ex. alert(1+1); => 결과 2 
+    alert(1.2+1.2) => 결과 2.4
+    alert(6/2) => 결과 3
+
+2) 수의 연산
+
+프로그래밍,컴퓨터라는 도구는 기본적으로 계산기로 고안된 도구이다. 
+그러므로 프로그래밍은 계산과 관련된 기능을 기본적으로 갖고있다. 
+
+javascript를 이용하여 연산을 하고싶을때는 math 를 사용하고 그 뒤에는 연산의 종류에 따른 명령을 하면 된다. 
+ex.
+Math.pow(3.2);  => 결과 3의2승
+Math.round(10.6);  => 10.6을 반올림
+Math.ceil(10.2);  => 10.2를 올림
+Math.floor(10.6);  => 10.6을 내림
+Math.sqrt(9);  => 9의 제곱근 (결과 3)
+Math.random();  => 0부터 1.0 사이의 랜덤한 숫자
+100*Math.random();  => 0부터 100 사이의 랜덤한 숫자 (소수점으로 나옴)
+Math.round(100*Math.random());  => 0부터 100 사이의 랜덤한 숫자가 정수로 나옴 
+
+
+<2> 문자 (따옴표 있음)
+문자는 반드시 작은따옴표-작은따옴표 or 큰따옴표-큰따옴표로 작성해야 한다. 
+' ' or " " 
+' " -> 브라우저가 읽지 못함 (시작과 끝의 코드를 읽기때문에 시작과 끝의 따옴표가 다르면 인식불가. 에러발생)
+ex. 
+"Blair's coding everybody" -> 결과 Blair's coding everybody
+'Blair"s coding everybody' -> 결과 Blair"s coding everybody
+"coding everybody'" -> 결과 coding everybody' 
+
+ex. 
+'Blair's coding everybody' -> 에러발생
+하기와 같은 방법으로 변경. (시작과 끝으로 사용되지 않는 따옴표의 앞에 역슬래쉬 \ 넣어줄것)
+'Blair\'s coding everybody' -> 결과 'Blair's coding everybody'
+역슬래쉬(\) 바로 뒤의 문자는 문자와 문자의 구획을 정리하는것이 아닌 정보로써의 문자로 인식함. 
+=> escape 라고 함. 
+
+
+typeof 1 => number(숫자)
+typeof "1" => string(문자열)
+
+<3> 문자의 연산 
+1) 여러줄 표시 (\n) => 줄바꿈의 약속 
+alert("coding everybody");
+->
+coding everybody
+
+alert("coding\neverybody");
+-> 
+coding
+everybody
+
+2) 문자와 문자 결합 
+alert("coding"+"everybody");
+-> 
+codingeverybody
+
+alert("coding"+" "+"everybody");
+-> 
+coding everybody
+
+
+***중요***
+1+1
+-> 2
+
+"1"+"1"
+-> 11
+*********
+
+3) 문자의 길이 (.length)
+alert("coding everybody".length);
+-> 16 
+
+
+
+
+
+
+
