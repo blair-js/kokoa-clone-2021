@@ -1,0 +1,99 @@
+*조건문* 
+비교 연산의 결과로 true or false 를 얻을 수 있다고 배웠다. 
+여기서 true 와 false는 숫자와 문자처럼 언어에서 제공하는 데이터 형이다. 
+이를 Boolean(불린)이라고 부르고 불린으로 올 수 있는 값은 true와 false 두가지 밖에 없다. 
+뷸린은 조건문에서 핵심적인 역할을 담당한다. 
+
+조건문이란 주어진 조건에 따라서 에플리케이션을 다르게 동작하도록 하는 것이다. 
+
+1) 문법
+if 로 시작한다. 
+if 뒤의 괄호에 조건이 오고, 조건이 될 수 있는 값은 Boolean 이다. 
+Boolean이 true라면 조건이 담겨진 괄호 다음의 중괄호 구문이 실행된다. 
+
+//ex 1) 결과 true 
+if(true){
+    alert('result : true');
+}
+
+//ex 2) 실행 X
+if(false){
+    alert('result : true');
+}
+
+//ex 3)
+if(true){
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+
+//ex 4) 결과 5 
+if(false){
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+}
+alert(5);
+
+2) else 
+if 가 true 라면 if 구문이 실행되고 else 구문이 실행되지 않음. 
+if 가 false 라면 if 구문이 실행되지 않고 else 구문이 실행됨.
+
+//ex 1) 결과 1 
+
+if(true){
+    alert(1);
+} else {
+    alert(2);
+}
+
+//ex 2) 결과 2 
+
+if(false){
+    alert(1);
+} else {
+    alert(2);
+}
+
+3) else if 
+조건문을 좀 더 풍부하게 할 수 있다.
+else if는 좀 더 다양한 케이스의 조건을 검사할 수 있는 기회를 제공한다. 
+else if의 특징은 if나 else와는 다르게 여러개가 올 수 있다는 점이다. 
+else if의 모든 조건이 false라면 else가 실행된다. else는 생략 가능하다.  
+
+//ex 1) 결과 2
+if(false){
+    alert(1);
+} else if(true){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+
+//ex 2) 결과 3 
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(true){
+    alert(3);
+} else {
+    alert(4);
+}
+
+//ex 3) 결과 4 
+if(false){
+    alert(1);
+} else if(false){
+    alert(2);
+} else if(false){
+    alert(3);
+} else {
+    alert(4);
+}
