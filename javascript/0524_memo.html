@@ -64,5 +64,55 @@ alert(1==="1")  //false 숫자와 문자이므로 다름...
 (but, 동등 연산자인 == 즉.. alert(1=="1")은 true로 나옴....)
 => ===는 숫자1과 문자1을 다르게 인식하고, ==는 양쪽의 값을 같다고 판단한다. 이것이 '정확'의 의미이다. 
    ===는 서로 같은 수를 표현하고 있더라고 데이터 형이 같은 경우에만 같다고 판단하기 때문이다. 
-   결론은 == 연산ㄷ자 대신 === 연산자를 쓰는 것을 강력하게 권함! 
+   결론은 == 연산ㄷ자 대신 === 연산자를 쓰는 것을 강력하게 권장! 
+
+
+4) undefined & null   
+var a;
+alert(a);
+->
+undefined 
+정의되지 않음 (프로그래머가 의도하지 않은 상황)
+
+var a=null;
+alert(a);
+->
+null 
+값이 없는 (프로그래머가 값이 없도록 의도한 상황)
+
+alert(undefined==null); 
+-> true 
+alert(undefined===null);
+-> false
+
+
+javascript에서 
+숫자 1 과 문자 '1'은 동등연산자(==)에서는 true 이며, 1 & '1'이 아닌 나머지 숫자나 문자는 false 이다. 
+그러나 일치연산자(===)에서는 숫자 1 과 문자 '1' 모두 false 이다. 
+alert(true == 1);               //true
+alert(true === 1);              //false
+alert(true == '1');             //true
+alert(true === '1');            //false
+
+alert(0 === -0);                //true
+
+5) Nan : Not a number 라는 뜻으로 숫자가 아니라는 의미이다.
+alert(Nan === Nan);             //false
+
+5) 부정과 부등호 
+! 부정을 의미한다. '같다'의 부정은 '같지않다'이다. 이것을 기호로 != 로 표시한다. 
+ex. 
+alert(1!=2);            //true
+alert(1!=1);            //false
+alert("one"!="two");    //true
+alert("one"!="one");    //false
+
+!== 정확하게 같지 않다는 의미. 
+
+그 외....
+>
+< 
+>= 
+=< 
+
 
