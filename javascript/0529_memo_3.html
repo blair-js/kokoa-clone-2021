@@ -5,4 +5,41 @@
 
 Ajax 
 
+1) 클로저 (closer)
+내부함수가 외부함수의 맥락에 접근할 수 있는 것을 가르킨다. 
+클로저는 자바스크립트를 이용한 고난이도의 테크닉을 구사하는데 필수적인 개념. 
+
+내부함수란? 
+ex.1
+function outer() {
+    function inner() {
+        var title = 'coding everybody';
+        alert(title); 
+    }
+    inner();
+}
+outer();
+
+ex.2 내부함수는 외부함수의 지역변수에 접근할 수 있다. 
+function outer() {
+    var title = 'coding everybody'
+    function inner() {
+        alert(title); 
+    }
+    inner();
+}
+outer();
+
+=> 결과값은 ex.1 과 ex.2 모두 coding everybody 이다. 
+
+ex.3 
+function outer() {
+    var title = 'coding everybody';
+    return function() {
+        alert(title); 
+    }
+}
+    inner = outer();
+    inner();
+
 
