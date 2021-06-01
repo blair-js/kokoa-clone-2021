@@ -1,0 +1,57 @@
+1) 객체지향 프로그래밍 object oriented programming 
+좀 더 나은 프로그램을 만들기 위한 프로그래밍 패러다임으로 
+로직을 상태와 행위로 이루어진 객체로 만드는 것. 
+객체란 서로 연관된 변수와 함수를 그룹핑한 그릇이라고 할 수 있다. 
+객체 내의 변수를 프로퍼티(property) 함수를 메소드(method)라고 부른다. 
+
+문법과 설계 
+
+-추상화 abstract 
+해결해야될 문제, 반영해야될 현실을 소프트웨어적으로 단순화시켜 만든 행위. 
+
+-부품화 
+
+-은닉화,캡슐화 
+내부의 동작방법을 단단한 케이스(객체)안으로 숨기고 사용자에게는 그 부품의 사용방법(메소드)만을 노출하고 있는 것이다. 
+
+-인터페이스
+부품과 부품을 서로 교환 
+
+2) 자바스크립트의 객체지향 
+
+*객체생성 
+ex.
+var person = {}
+person.name = 'Blair'; 
+<!-- name 이라는 변수(속성,프로퍼티)를 담음. 변수의 내용은 문자열 'Blair'이다.  -->
+person.introduce = funtion () {
+    return 'My name is '+this.name;
+}
+<!-- 프로퍼티에 담겨있는 함수를 메소드라고 함!  -->
+document.write(person.introduce ()); 
+
+ex.위의 코드를 객체의 값을 정의하여 코드 셋팅 
+var person = {
+    'name' : 'Blair'
+    'introduce' : funtion() {
+        return 'My name is '+this.name;
+    }
+}
+document.write(person.introduce ()); 
+
+*생성자 constructor
+생성자는 객체를 만드는 역할을 하는 함수다. 
+자바스크립트에서 함수는 재사용 가능한 로직의 묶음이 아니라 객체를 만드는 창조자라고 할 수 있다. 
+
+ex. 
+<!-- 함수에 new 를 붙이면 그 return 값은 객체가 된다.  -->
+function Person(){}
+var p = new Person();
+p.name = 'egoing';
+p.introduce = function(){
+    return 'My name is '+this.name; 
+}
+document.write(p.introduce());
+
+
+
