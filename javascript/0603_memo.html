@@ -1,0 +1,31 @@
+1) 상속이란? inheritance 
+객체는 연관된 로직들로 이루어진 작은 프로그램이라고 할 수 있다. 
+상속은 객체의 로직을 그대로 물려 받는 또 다른 객체를 만들 수 있는 기능을 의미한다. 
+단순히 물려받는것 말고 기존의 로직을 수정하고 변경해서 파생된 새로운 객체를 만들 수 있게 해준다. 
+즉, 로직재활용! 
+
+ex. 
+function Person(name); {
+    this.name = name;
+    this.introduce = function() {
+        return 'My name is '+this.name;
+    }
+}
+var p1 = new Person('Blair');
+document.write(p1.introduce()+"<br />");
+)
+=> 결과 My name is Blair 
+
+ex. 변형 
+function Person(name); {
+    this.name = name;
+    }
+Person.prototype.name=null;
+Person.prototype.introduce = function() {
+    return 'My name is '+this.name; 
+}    
+}
+var p1 = new Person('Blair');
+document.write(p1.introduce()+"<br />");
+)
+=> 결과 My name is Blair 
