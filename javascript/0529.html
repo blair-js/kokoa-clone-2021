@@ -4,13 +4,42 @@
     <title></title>
     <body>
         <script type = "text/javascript">
-        var numbers = [20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-        var sortfunc = function(a,b) {
-            return a-b;
+        
+        var num1 = 321;
+
+        var num2 = 11;
+
+        var num3;
+
+        var num4 = 77;
+        
+        var chk = 3;
+
+        var chk4 = 2;
+
+        var numberHap = function(chk, chk1, chk2 , chk4, chk3) {
+            
+            var v = num2 + chk1;
+            num3 = 4;
+            var z = num3 + 3;
+
+            var j = z + chk + chk1 - chk4 + chk;
+
+            return j;
         }
+        
+        function numberGop (chk4, chk3, chk2, chk, chk1) {
+            var k = chk + chk1;
+            return numberHap(k, 4, chk4, chk1, 3);
+        }
+        document.write(numberGop(42, 23 ,1 ,2 ,3));
+
+
+
+        
         console.log(numbers.sort(sortfunc));  
         </script>
     </body>
 </html>
-
-==> 결과 1,2,3,4,5,6,7,8,9,10,20 
+<!-- 
+==> 결과 1,2,3,4,5,6,7,8,9,10,20  -->

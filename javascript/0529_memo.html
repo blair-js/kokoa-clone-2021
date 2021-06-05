@@ -1,61 +1,72 @@
 *문자열 메소드 실행*
 1) string.match()
+
 ex.
 var pattern = /a/;
-var str = 'abcde';
-str.match(pattern);
-=> 결과 a 
+var jisu = 'abcde';
+jisu.match(pattern);
+=> 결과 a
 
-ex. 
-var pattern = /a/;
+ex.
+var jisu = "tytuytuaaaa";
+var pattern2 = /i/i;
+
+jisu.replace('a', 'A')
+=> tytuytuaaaa 
+
+
 var str = 'bcde';
 str.match(pattern);
-=> 결과 null 
+=> 결과 null
 
 2) string.replace()
 var str = 'abcde';
 str.replace(pattern, 'A');
 => 결과 Abcde
 
-*옵션*
-i를 붙이면 대소문자를 구분하지 않는다. 
 
-ex. 
+"".match(    );
+
+/ ? /i
+/ ? /g
+/ ? /
+
+
+*옵션*
+i를 붙이면 대소문자를 구분하지 않는다.
+
+ex.
 var xi = /a/;
 "Abcde".match(xi);
-=> 결과 null 
+=> 결과 null
 
 var oi = /a/i;
 "Abcde".match(oi);
 => 결과 A
 
-g를 붙이면 검색된 모든 결과를 리턴한다. 
+g를 붙이면 검색된 모든 결과를 리턴한다.
 ex.
 var xg = /a/;
-"abcdea".match(xg); 
-=> 결과 a 
+"abcdea".match(xg);
+=> 결과 a
 
 var og = /a/g;
-"abcdea".match(og); 
+"abcdea".match(og);
 => 결과 a,a
 
-i,g 를 동시에 사용 가능. 
-ex. 
+i,g 를 동시에 사용 가능.
+ex.
 var ig = /a/ig;
 "AabcdAa".match(i
 
 
-*정규표현식의 캡처,치환* 
+*정규표현식의 캡처,치환*
 (\w+)\s(\w+);
 word+space+word
 
-ex. 
+ex.
 var pattern = /(\w+)\s(\w+);
 var str = "coding everybody";
 var result = str.replace(pattern, "$2, $1");
 console.log(result);
-everybody, coding 
-
-
-
-
+everybody, coding

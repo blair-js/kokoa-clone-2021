@@ -5,15 +5,28 @@
     <body>
         <script> 
 
-       var numbering = function () {
-            i = 0;
-            while(i < 10) {
-                document.write(i);
-                i += 1;
-            }
-        }
-        numbering();
+    // var numbering = function () {
+    //         i = 0;
+    //         while(i < 10) {
+    //             document.write(i);
+    //             i += 1;  // 숫자 이외의 문자도가능해
+    //             // i++ // i 가 숫자만 가능 
+    //         }
+    //     }
+    //     numbering();
 
+        / ?         /
+        var pattern1 = "abc";
+        var pattern2 = /abc/; 
+        var jisu = "abcpple";
+        // document.write(jisu.match(/a/));
+
+        document.write(jisu.replace(pattern2, "A"));
+        document.write("abcpple".replace(pattern1, "A"));
+        document.write("abcpple".replace(/abc/, "A"));
+
+
+        // 메서드 == 함수 
         </script>
     </body>
-</html>
+</html>      

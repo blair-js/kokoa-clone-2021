@@ -5,23 +5,28 @@ return
 
 function get_remember1() {
     return 'Blair';
-    return 'Happy';
-    return "Love";
+    <!-- return 'Happy';
+    return "Love"; -->
 }
-alert(get_remember()); 
+alert(get_remember1()); 
 
 => 결과 : Blair 출력 
 
 2)함수의 입력
 
+function get_argument(arg) {    // 선언부
+    return arg;                 // 구현부 
+}                               
 
-function get_argument(arg) {
-    return arg;
+
+function jisu() {
+    get_argument(1);
+
 }
-alert(get_argument(1));
-alert(get_argument(2)); 
 
-=> 결과 : 1, 2 순서대로 출력 
+jisu();
+
+=> 결과 : 1
 
 2) 배열 (array)
 연관된 데이터를 모아서 통으로 관리하기 위해서 사용하는 데이터 타입이다. 
