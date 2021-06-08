@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+       <h3>버튼을 클릭하면 2초마다 계속 알림 상자가 표시됩니다.</h3>
+       <button onclick="alertBox()">클릭하세요!</button>
+
+      <script> 
+       function alertBox() { 
+           setInterval(function(){alert("2초가 지났습니다!");}, 2000);
+       }
+      </script> 
+    </body>
+</html>
