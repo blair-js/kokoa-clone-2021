@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h1 id="sample">환영합니다!</h1>
+      <p>버튼을 클릭하면 글씨의 색상이 바뀝니다.</p>
+       <button onclick="changeTitle()">클릭하세요</button>
+       
+       <script>
+          function changeTitle() {
+           var x = document.getElementById("sample"); 
+           x.style.color = "blue";
+
+        //  var x = document.getElementById("sample").innerHTML = "마감시간이 지났습니다.";
+          }
+       </script>
+   </body>
+</html>
