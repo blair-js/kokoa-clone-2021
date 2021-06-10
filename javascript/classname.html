@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <body>
+     <h3 class = "greeting">환영합니다!</h3>
+     <h3 class = "greeting">어서오세요!</h3>
+     <h3 class = "greeting">반갑습니다!</h3>
+     
+     <button onclick="changeGround()">클릭하세요!</button>
+       <script>
+       var x = document.getElementsByClassName("greeting");
+       var i ;
+       
+       function changeGround() { 
+      for (i=0; i<x.length; i++) {
+       x[i].style.backgroundColor = "yellow"; 
+      }
+    }
+       </script>
+   </body>
+</html>
