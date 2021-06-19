@@ -1,12 +1,6 @@
-const a = 5;
-const b = 2;
 
-let myName = "blair"; 
 
-console.log(a+b);
-console.log(a*b);
-console.log(a/b);
-console.log("hello " + myName);
-
-myName= "jisu"
-console.log("your new name is " +myName);
+const b = true;
+const amIFat = null;
+let something;  //undefined 인 상태
+console.log(something); 
