@@ -9,4 +9,4 @@ console.log(a/b);
 console.log("hello " + myName);
 
 myName= "jisu"
-console.log("yo 
+console.log("your new name is " +myName);
