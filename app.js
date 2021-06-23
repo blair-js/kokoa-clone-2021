@@ -5,4 +5,4 @@ function calculateKrAge(ageOfForeigner) {
 
 const krAge = calculateKrAge(age); 
 
-console.log(krAge); ;;
+console.log(krAge);
