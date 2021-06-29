@@ -1,16 +1,39 @@
-const title = document.querySelector("div.hello:first-child h1");
+const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    title.style.color = "blue"; 
+    h1.style.color = "blue"; 
 }
 
 function handleMouseenter() {
-    title.innerText = "mouse is here!";
+    h1.innerText = "mouse is here!";
 }
 
 function handleMouseleave() {
-    title.innerText = "Mouse is gone";
+    h1.innerText = "Mouse is gone";
 }
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseenter);
-title.addEventListener("mouseleave", handleMouseleave);
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy() {
+    alert("copier!");
+}
+
+function handleWindowOffline() {
+    alert("SOS no WIFI");
+}
+
+function handleWindowOnline() {
+    alert("All good");
+}
+
+h1.addEventListener("click", handleTitleClick);
+// title.onclick = handleTitleClick; ===> 위와 같은 기능 
+h1.addEventListener("mouseenter", handleMouseenter);
+h1.addEventListener("mouseleave", handleMouseleave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
