@@ -7,6 +7,8 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
 // const loginButton = document.querySelector("#login-form button");
 
 // function onLoginBtnClick() {
@@ -23,12 +25,26 @@ function onLoginSubmit(event) {
    event.preventDefault();
    loginForm.classList.add("hidden");
    const username = loginInput.value;
-   localStorage.setItem("username", username);
+   localStorage.setItem(USERNAME_KEY, username);
    // greeting.innerText = "Hello " + username; 아래와 동일한 방법. 
+   painGreetings(username); 
+}
+
+function painGreetings(username) {
    greeting.innerText = `Hello ${username}`;
-   greeting.classList.remove(HIDDEN_CLASSNAME);
+   greeting.classList.remove(HIDDEN_CLASSNAME); 
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
 
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+console.log(savedUsername);
+
+if(savedUsername === null) {
+   loginForm.classList.remove(HIDDEN_CLASSNAME);
+   loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+   painGreetings(savedUsername); 
+}
 
