@@ -4,8 +4,9 @@
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 // const loginButton = document.querySelector("#login-form button");
 
 // function onLoginBtnClick() {
@@ -20,14 +21,13 @@ const link = document.querySelector("a");
 
 function onLoginSubmit(event) {
    event.preventDefault();
-   console.log(loginInput.value);
-}
-
-function handleLinkClick(event) {
-   event.preventDefault();
-   console.dir(event);
+   loginForm.classList.add("hidden");
+   const username = loginInput.value;
+   // greeting.innerText = "Hello " + username; 아래와 동일한 방법. 
+   greeting.innerText = `Hello ${username}`;
+   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick)
+
 
