@@ -27,7 +27,7 @@ function onLoginSubmit(event) {
    const username = loginInput.value;
    localStorage.setItem(USERNAME_KEY, username);
    // greeting.innerText = "Hello " + username; 아래와 동일한 방법. 
-   painGreetings(); 
+   painGreetings(username); 
 }
 
 function painGreetings(username) {
@@ -44,6 +44,6 @@ if(savedUsername === null) {
    loginForm.classList.remove(HIDDEN_CLASSNAME);
    loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-   painGreetings(); 
+   painGreetings(savedUsername); 
 }
 
