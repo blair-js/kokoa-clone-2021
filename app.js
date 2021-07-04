@@ -23,11 +23,11 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
    event.preventDefault();
-   loginForm.classList.add("hidden");
+   loginForm.classList.add(HIDDEN_CLASSNAME);
    const username = loginInput.value;
    localStorage.setItem(USERNAME_KEY, username);
    // greeting.innerText = "Hello " + username; 아래와 동일한 방법. 
-   painGreetings(username); 
+   painGreetings(); 
 }
 
 function painGreetings(username) {
@@ -39,12 +39,11 @@ loginForm.addEventListener("submit", onLoginSubmit);
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-console.log(savedUsername);
 
 if(savedUsername === null) {
    loginForm.classList.remove(HIDDEN_CLASSNAME);
    loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-   painGreetings(savedUsername); 
+   painGreetings(); 
 }
 
