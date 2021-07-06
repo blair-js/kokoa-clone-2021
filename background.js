@@ -8,4 +8,4 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `javascript/${chosenImage}`;
 
-document.body.appendChild(bgImage); ;
+document.body.appendChild(bgImage);
