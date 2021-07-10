@@ -32,7 +32,7 @@ function handleToDosubmit(event) {
     toDoInput.value = "";
     toDos.push(newTodo);
     painToDo(newTodo);
-    saveToDos();
+    saveToDos();;
 }
 
 toDoForm.addEventListener("submit", handleToDosubmit);
