@@ -3,10 +3,12 @@ const toDoInput = toDoForm.querySelector("input");
 //const toDoInput = document.querySelector("todo-form input"); 위 코드와 동일한내용. 코드법만 다름. 
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY = "todos";
+
 const toDos = [];
 
 function saveToDos() {
-    localStorage.setItem("todos", JSON.stringify(toDos));
+    localStorage.setItem("TODOS_KEY", JSON.stringify(toDos));
 }
 
 function deleteToDo(event) {
@@ -36,3 +38,11 @@ function handleToDosubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDosubmit);
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+console.log(savedToDos);
+
+if(savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    console.log(parsedToDos);
+}
