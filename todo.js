@@ -8,7 +8,7 @@ const TODOS_KEY = "todos";
 const toDos = [];
 
 function saveToDos() {
-    localStorage.setItem("TODOS_KEY", JSON.stringify(toDos));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function deleteToDo(event) {
@@ -41,7 +41,6 @@ toDoForm.addEventListener("submit", handleToDosubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 console.log(savedToDos);
-
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     console.log(parsedToDos);
