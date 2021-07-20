@@ -1,0 +1,33 @@
+생활코딩 Youtube 
+
+#1 
+class : 코드가 많아짐에 따라 서로 연관된 같은 주제를 갖고있는 변수,메소드를 그룹핑한 것 
+Math.PI 
+Math.floor(1.8) // 소수점 내림 
+Math.ceil(1.8) // 소수점 올림
+=> Math는 class, PI는 변수, floor&ceil은 메소드 
+
+FileWriter f1 = new FileWriter("data.txt");
+f1.write("Hello");
+f1.Write(" Java");
+f1.close();
+=> FileWriter가 class 이며,
+   앞에 new 를 붙여서 f1이라는 변수에 담기는 복제본을 만든 것 이다. 
+   그 복제본의 내용에는 data.txt라는 파일의 내용을 저장하겠다라는 상태를 가지고있는 복제본 임!
+
+FileWriter f2 = new FileWriter("data2.txt");
+f2.write("Hello");
+f2.Write(" Java2");
+f2.close();
+
+===> class : System, Math, FileWriter
+     instanve : f1, f2 
+
+
+#2     
+유효범위 
+해당 메소드 안에 변수가 선언되어 있지 않다면 밖의 변수를 찾게 된다. 
+
+
+
+    
