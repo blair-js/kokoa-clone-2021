@@ -28,6 +28,50 @@ f2.close();
 유효범위 
 해당 메소드 안에 변수가 선언되어 있지 않다면 밖의 변수를 찾게 된다. 
 
+#3
+instance 
+원형인 class 를 복제(?)한 것이 instance 
+생성자 new 이용! 
+ex. 원형 class name이 ABC 라면 
+ABC 변수(instance) = new ABC ; <<<- 이러한 방식으로 만들면 됨 
+==> class 는 주제에 맞는 기능들을 몽땅 모아 놓은 것이고 
+    instance는 그런 것들을 변수화 시킨 것. 
 
+==> 이 때 class 로 선언한 static을 빼주어야 각 instance가 각자의 성질에 맞게 변함 ---> 이해 못함.... ㅠ_ㅠ 뭔소리고? ---> 이해함(ㅇㅏ래설명!!!!!)
 
-    
+#4 
+static 
+static이 있는건 class 소속
+static이 없는건 instance 소속 
+=> class에서 여러 독립적인 instance를 생성할 때 모든 instance가 공통적으로 사용해야 하는 값에 대해선 static을 취한다. 
+   반면, 독릭접인 instance에서 class의 변수나 메소드를 가져와 변동(변경)하여 사용할 경우엔 static을 취하지 않는다. 
+=> 즉 class A가 있고, instance a와b가 있을때 
+   static으로 부여된 변수나 메소드에 대해선 instance a 에서 수정된 내용이 b에도 반영이 되지만 
+   static으로 부여되지 않은 변수나 메소드는 변경을 원하는 instance에만 적용이 되며, 다른 instance들은 독립적으로 기존의 class의 값을 유지하거나 각각 독립적으로 변경되어 사용됨. 
+=> static은 class로만 호출가능. instance로는 호출불가능. 
+
+class Foo {
+     public static String classVar = "I class var;"
+     public String instanceVar = "I instance var";
+     public static void classMethod() {
+          system.out.println(classVar); // Ok
+          system.out.println(instanceVar); // Error
+     }
+     public void instanceMethod() {
+          system.out.println(classVar); // Ok
+          system.out.println(instanceVar); // Error
+     }
+}
+
+public class StaticApp {
+
+     public static void main(String[] args) {
+          system.out.println(Foo.classVar); // Ok
+          system.out.println(Foo.instanceVar); // Error
+          Foo.classMethod(); // Ok
+          Foo.instanceMethod(); // Error
+
+          Foo f1 = new Foo();
+     }
+
+}
